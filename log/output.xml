@@ -1,19 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230817 20:53:57.066" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230817 21:53:31.637" rpa="false" schemaversion="4">
 <suite id="s1" name="TestCaseN11" source="C:\e2e_N11\tests\TestCaseN11.robot">
-<test id="s1-t1" name="N11 login ve urun sepete ekleme testi" line="9">
-<status status="FAIL" starttime="20230817 20:53:57.101" endtime="20230817 20:53:57.102">Test cannot be empty.</status>
+<test id="s1-t1" name="N11 login" line="10">
+<kw name="N11 Anasayfaya Git" library="N11Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${DataN11.UrlN11}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230817 21:53:31.959" level="INFO">Opening browser 'chrome' to base url 'https://www.n11.com/'.</msg>
+<status status="PASS" starttime="20230817 21:53:31.958" endtime="20230817 21:53:58.437"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230817 21:53:58.437" endtime="20230817 21:53:58.622"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230817 21:53:58.622" endtime="20230817 21:53:58.625"/>
+</kw>
+<status status="PASS" starttime="20230817 21:53:31.957" endtime="20230817 21:53:58.626"/>
+</kw>
+<kw name="N11 Giris Yap" library="N11Page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${N11Locators.Giris_yap}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230817 21:53:58.628" level="INFO">Clicking element '//a[@title='Giriş Yap']'.</msg>
+<status status="PASS" starttime="20230817 21:53:58.626" endtime="20230817 21:54:20.369"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${N11Locators.Email_yeri}</arg>
+<arg>${DataN11.EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230817 21:54:20.370" level="FAIL">Resolving variable '${DataN11.EMAIL}' failed: AttributeError: type object 'DataN11' has no attribute 'EMAIL'</msg>
+<status status="FAIL" starttime="20230817 21:54:20.369" endtime="20230817 21:54:20.371"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${N11Locators.sifre_yeri}</arg>
+<arg>${DataN11.SIFRE}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230817 21:54:20.371" endtime="20230817 21:54:20.371"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20230817 21:54:20.372" endtime="20230817 21:54:20.372"/>
+</kw>
+<status status="FAIL" starttime="20230817 21:53:58.626" endtime="20230817 21:54:20.372"/>
+</kw>
+<status status="FAIL" starttime="20230817 21:53:31.956" endtime="20230817 21:54:20.372">Resolving variable '${DataN11.EMAIL}' failed: AttributeError: type object 'DataN11' has no attribute 'EMAIL'</status>
 </test>
-<status status="FAIL" starttime="20230817 20:53:57.072" endtime="20230817 20:53:57.103"/>
+<test id="s1-t2" name="Urun sepete ekleme" line="14">
+<kw name="Urun Arama" library="N11Page">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${N11Locators.Arama_yeri}</arg>
+<arg>${DataN11.ARANACAK_KELIME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230817 21:54:20.376" level="INFO">Typing text 'Dupont 16186 Murder Çakmak' into text field 'xpath=//input[@id='searchData']'.</msg>
+<status status="PASS" starttime="20230817 21:54:20.375" endtime="20230817 21:54:20.589"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${N11Locators.Arama_Butonu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230817 21:54:20.590" level="INFO">Clicking element 'css=.iconsSearch'.</msg>
+<status status="PASS" starttime="20230817 21:54:20.589" endtime="20230817 21:54:42.606"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230817 21:54:42.606" endtime="20230817 21:54:42.607"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${DataN11.Expected_Title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230817 21:54:42.608" level="FAIL">Resolving variable '${DataN11.Expected_Title}' failed: AttributeError: type object 'DataN11' has no attribute 'Expected_Title'</msg>
+<status status="FAIL" starttime="20230817 21:54:42.607" endtime="20230817 21:54:42.608"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${N11Locators.Sepete_Ekle}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230817 21:54:42.608" endtime="20230817 21:54:42.608"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${N11Locators.Sepet_Butonu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230817 21:54:42.608" endtime="20230817 21:54:42.608"/>
+</kw>
+<status status="FAIL" starttime="20230817 21:54:20.374" endtime="20230817 21:54:42.609"/>
+</kw>
+<status status="FAIL" starttime="20230817 21:54:20.374" endtime="20230817 21:54:42.609">Resolving variable '${DataN11.Expected_Title}' failed: AttributeError: type object 'DataN11' has no attribute 'Expected_Title'</status>
+</test>
+<status status="FAIL" starttime="20230817 21:53:31.641" endtime="20230817 21:54:42.610"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="TestCaseN11">TestCaseN11</stat>
+<stat pass="0" fail="2" skip="0" id="s1" name="TestCaseN11">TestCaseN11</stat>
 </suite>
 </statistics>
 <errors>
