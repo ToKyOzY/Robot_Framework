@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230817 20:53:57.066" rpa="false" schemaversion="4">
+<suite id="s1" name="TestCaseN11" source="C:\e2e_N11\tests\TestCaseN11.robot">
+<test id="s1-t1" name="N11 login ve urun sepete ekleme testi" line="9">
+<status status="FAIL" starttime="20230817 20:53:57.101" endtime="20230817 20:53:57.102">Test cannot be empty.</status>
+</test>
+<status status="FAIL" starttime="20230817 20:53:57.072" endtime="20230817 20:53:57.103"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCaseN11">TestCaseN11</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
